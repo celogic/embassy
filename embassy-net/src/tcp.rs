@@ -1024,6 +1024,12 @@ mod embedded_io_impls {
         }
     }
 
+    impl<'d> embedded_io_async::Split for TcpSocket<'d> {
+        fn split(&mut self) -> (impl embedded_io_async::Read, impl embedded_io_async::Write) {
+            self.split()
+        }
+    }
+
     impl<'d> embedded_io_async::ErrorType for TcpReader<'d> {
         type Error = Error;
     }

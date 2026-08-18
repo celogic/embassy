@@ -10,6 +10,7 @@ out/
 .zed
 .neoconf.json
 *.vim
+**/.vscode
 **/.idea
 **/.nvim.lua
 **/.cargo
